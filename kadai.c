@@ -42,11 +42,11 @@ int main() {
 	devsci = sqrt(suma / 20 - avesci * avesci);
 	deveng = sqrt(sumb / 20 - aveeng * aveeng);
 
-	printf("理科平均：%.3f,英語平均：%.3f\n", avesci, aveeng);
-	printf("理科偏差：%.3f,英語偏差：%.3f\n", devsci, deveng);
-	printf("理科合計：%.1f,英語合計：%.1f\n", totsci, toteng);
+	printf("SciAve:%.3f,EngAve:%.3f\n", avesci, aveeng);
+	printf("SciDev:%.3f,EngDev:%.3f\n", devsci, deveng);
+	printf("SciDev:%.1f,EngTot:%.1f\n", totsci, toteng);
 
-	printf("偏差値：\n");
+	printf("Devition:\n");
 	for (i = 0; i < 20; i++) {
 		valsci[i] = 50 + 10 * (sci[i] - avesci) / devsci;
 		valeng[i] = 50 + 10 * (eng[i] - aveeng) / deveng;
@@ -55,12 +55,12 @@ int main() {
 
 	sort(sci, 20);
 	sort(eng, 20);
-	printf("理科ソート：");
+	printf("Sci_Sort:");
 	for (i = 0; i < 20; i++) {
 		printf("%.1f ",sci[i]);
 	}
 	printf("\n");
-	printf("英語ソート：");
+	printf("Eng_Sort:");
 	for (i = 0; i < 20; i++) {
 		printf("%.1f ", eng[i]);
 	}
